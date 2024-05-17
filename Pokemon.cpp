@@ -14,14 +14,17 @@ void Pokemon:: setHealth(int health){
 void Pokemon:: setArmor(int armor){
     this->armor=armor;
 }
-void Pokemon::setArmor(int damage){
+void Pokemon::setDamage(int damage){
     this->damage=damage;}
+void Pokemon::setElement (string element) {
+    this->element=element;
+}
 
 int Pokemon::getHealth() { return health; }
 string Pokemon::getElement() { return element; }
 string Pokemon::getName(){return name;}
 int Pokemon::getArmor(){return armor;}
-
+int Pokemon::getDamage() {return damage;}
 
 void Pokemon:: takeDamage(int damage){
     this->health = this->health + armor - damage;

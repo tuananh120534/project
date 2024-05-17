@@ -17,7 +17,7 @@ class Pokemon{
      void setHealth(int health);
      void setName(string name);
 
-     void setDmage(int damage);
+     void setDamage(int damage);
 
      void setArmor(int armor);
 
