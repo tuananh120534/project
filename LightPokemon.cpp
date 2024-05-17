@@ -1,5 +1,5 @@
 #include "LightPokemon.h"
-EarthPokemon::EarthPokemon() : Pokemon("", 0, 0, 0, "Light") {}
-EarthPokemon::EarthPokemon(string name, int health, int damage, int armor, string element)
+LightPokemon::LightPokemon() : Pokemon("", 0, 0, 0, "Light") {}
+LightPokemon::LightPokemon(string name, int health, int damage, int armor, string element)
     : Pokemon(name, health, damage, armor, "Light") {}
 LightPokemon::~LightPokemon() {}
