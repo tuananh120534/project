@@ -6,5 +6,6 @@ public:
     EarthPokemon();
     EarthPokemon(string name, int health, int damage, int armor, string element);
     virtual void attack() = 0;
+    ~EarthPokemon();
 };
 #endif

@@ -6,4 +6,5 @@ void Tangela::attack(Pokemon* opponent) {
         damageDealt = damageDealt + 10;
     }
     opponent->takeDamage(damageDealt);
+    Tangela::~Tangela() {}
 }

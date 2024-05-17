@@ -5,5 +5,6 @@ class Exeggutor : public EarthPokemon {
 public:
     Exeggutor();
     virtual void attack(Pokemon* opponent) = 0;
+    ~Exeggutor();
 };
 #endif

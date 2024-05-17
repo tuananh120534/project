@@ -5,5 +5,6 @@ class Tangela : public EarthPokemon {
 public:
     Tangela();
     virtual void attack(Pokemon* opponent) = 0;
+    ~Tangela();
 };
 #endif

@@ -5,5 +5,6 @@ class Venesaur : public EarthPokemon {
 public:
     Venesaur();
     virtual void attack(Pokemon* opponent) = 0;
+    ~Venesaur();
 };
 #endif

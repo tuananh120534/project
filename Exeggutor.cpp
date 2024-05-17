@@ -6,4 +6,5 @@ void Exeggutor::attack(Pokemon* opponent) {
         damageDealt = damageDealt + 10;
     }
     opponent->takeDamage(damageDealt);
+    Exeggutor::~Exeggutor() {}
 }
