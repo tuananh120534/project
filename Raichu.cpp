@@ -6,5 +6,5 @@ void Raichu::attack(Pokemon* opponent) {
         damageDealt = damageDealt + 10;
     }
     opponent->takeDamage(damageDealt);
-    Raichu::~Raichu() {}
 }
+    Raichu::~Raichu() {};

@@ -6,5 +6,6 @@ void Venesaur::attack(Pokemon* opponent) {
         damageDealt = damageDealt + 10; 
     }
     opponent->takeDamage(damageDealt);
-    Venesaur::~Venesaur() {}
 }
+
+    Venesaur::~Venesaur() {};

@@ -6,5 +6,5 @@ void Zapdos::attack(Pokemon* opponent) {
         damageDealt = damageDealt + 10;
     }
     opponent->takeDamage(damageDealt);
-    Zapdos::~Zapdos() {}
 }
+    Zapdos::~Zapdos() {};

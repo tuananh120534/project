@@ -6,5 +6,5 @@ void Jolteon::attack(Pokemon* opponent) {
         damageDealt = damageDealt + 10;
     }
     opponent->takeDamage(damageDealt);
-    Jolteon::~Jolteon() {}
 }
+    Jolteon::~Jolteon() {};
