@@ -1,46 +1,33 @@
+#include <string>
 #ifndef POKEMON_H
 #define POKEMON_H
-#include <iostream>
-#include <string>
-using namespace std;
 
-class Pokemon{
-    protected:
-        string name;
-        int health;
-        int damage;
-        int armor;
-        string element;
-    public:
+class Pokemon {
+protected:
+    int health;
+    double defence;
+    int damage;
+
+public:
     Pokemon();
-    Pokemon(string name,int health,int damage,int armor,string element);
-     void setHealth(int health);
-     void setName(string name);
+    Pokemon(int health, double defence, int damage);
 
-     void setDamage(int damage);
+    virtual void attack(Pokemon* enemy, Pokemon* player) = 0;
+    virtual double damageMultiplier(Pokemon* enemy) const = 0;
+    virtual std::string getName() const;
 
-     void setArmor(int armor);
+    int getHealth();
+    double getDefence();
+    int getDamage();
 
-     void setElement(string element);
+    void setHealth(int health);
+    void setDefence(double defence);
+    void setDamage(int damage);
 
-     string getName();
-     int getHealth();
-     int getDamage();
-     int getArmor();
-     string getElement();
+    virtual char getWeakness() const = 0;
+    virtual char getImmunity() const = 0;
 
-
-    virtual void attack()=0;
-    virtual void takeDamage(int damage);
-    ~Pokemon();
-
-
-
-
-
+    virtual ~Pokemon();
 };
 
-
-
-
-#endif
+#endif // POKEMON_H

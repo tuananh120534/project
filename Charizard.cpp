@@ -1,10 +1,23 @@
 #include "Charizard.h"
-Charizard::Charizard() : FirePokemon("Charizard", 100, 35, 10, "Fire") {}
-void Charizard::attack(Pokemon* opponent) {
-    int damageDealt = getDamage();
-    if (opponent->getElement() == "Light") {
-        damageDealt = damageDealt + 10;
-    }
-    opponent->takeDamage(damageDealt);
+
+Charizard::Charizard() : FireElement(), name("Charizard") {
+    health = 250;
+    defence = 0.9;
+    damage = 150;
+    weakness = 'W';
+    immunity = 'E';
 }
-Charizard::~Charizard(){}
+
+Charizard::Charizard(std::string name) : FireElement(), name(name) {
+    health = 250;
+    defence = 0.9;
+    damage = 150;
+    weakness = 'W';
+    immunity = 'E';
+}
+
+Charizard::~Charizard() {}
+
+std::string Charizard::getName() {
+    return name;
+}

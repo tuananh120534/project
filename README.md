@@ -1,1 +1,2 @@
-# project
+# prac-workspace
+Repository for OOP practicals 

@@ -1,32 +1,31 @@
 #include "Pokemon.h"
-#include <iostream>
-#include <string>
-using namespace std;
 
-Pokemon :: Pokemon(): Pokemon("",0,0,0,""){}
-Pokemon :: Pokemon(string name,int health,int damage,int armor,string element): Pokemon(name,health,damage,armor,element){}
-void Pokemon:: setName(string name){
-    this->name=name;
-}
-void Pokemon:: setHealth(int health){
-    this->health=health;
-}
-void Pokemon:: setArmor(int armor){
-    this->armor=armor;
-}
-void Pokemon::setDamage(int damage){
-    this->damage=damage;}
-void Pokemon::setElement (string element) {
-    this->element=element;
+Pokemon::Pokemon() : health(0), defence(0), damage(0) {}
+
+Pokemon::Pokemon(int health, double defence, int damage) : health(health), defence(defence), damage(damage) {}
+
+int Pokemon::getHealth() {
+    return health;
 }
 
-int Pokemon::getHealth() { return health; }
-string Pokemon::getElement() { return element; }
-string Pokemon::getName(){return name;}
-int Pokemon::getArmor(){return armor;}
-int Pokemon::getDamage() {return damage;}
-
-void Pokemon:: takeDamage(int damage){
-    this->health = this->health + armor - damage;
+double Pokemon::getDefence() {
+    return defence;
 }
-Pokemon :: ~Pokemon(){};
+
+int Pokemon::getDamage() {
+    return damage;
+}
+
+void Pokemon::setHealth(int health) {
+    this->health = health;
+}
+
+void Pokemon::setDefence(double defence) {
+    this->defence = defence;
+}
+
+void Pokemon::setDamage(int damage) {
+    this->damage = damage;
+}
+
+Pokemon::~Pokemon() {}

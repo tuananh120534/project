@@ -1,10 +1,20 @@
 #ifndef CHARIZARD_H
 #define CHARIZARD_H
-#include "FirePokemon.h"
-class Charizard : public FirePokemon {
+
+#include "FireElement.h"
+#include <string>
+
+class Charizard : public FireElement {
+private:
+    std::string name;
+
 public:
     Charizard();
-    virtual void attack(Pokemon* opponent) = 0;
+    Charizard(std::string name);
     ~Charizard();
+
+std::string getName() const override;
+std::string getName();
 };
+
 #endif
